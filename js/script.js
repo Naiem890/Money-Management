@@ -2,11 +2,16 @@ function isInputValid() {
   let valid = true;
   for (const arg of arguments) {
     if (isNaN(arg.value)) {
+      valid = false;
       const message = "Invalid input for " + arg.id;
+      showError(message);
+    } else if (Number(arg.value) < 0) {
+      valid = false;
+      const message = "Enter positive number for " + arg.id;
       showError(message);
     }
   }
-  return true;
+  return valid;
 }
 function reset() {
   const notification = document.querySelector(".notify-section");
@@ -43,7 +48,7 @@ document.getElementById("saveBtn").addEventListener("click", function () {
   if (isInputValid(save)) {
     const save = getValue("save");
     const [income, totalExp] = calcExpenses();
-    const totalSave = income * (save / 100);
+    const totalSave = income * save * 0.01;
     const totalRem = income - totalExp - totalSave;
     putValue("totalSave", totalSave);
     putValue("totalRem", totalRem);
@@ -51,6 +56,10 @@ document.getElementById("saveBtn").addEventListener("click", function () {
 });
 
 function showError(message) {
+  putValue("totalExp", 0);
+  putValue("totalBal", 0);
+  putValue("totalSave", 0);
+  putValue("totalRem", 0);
   const notification = document.querySelector(".notify-section");
   notification.style.display = "block";
   errorText = document.createElement("p");
