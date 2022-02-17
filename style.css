@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 2rem;
+  font-family: "Titillium Web", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4.6rem;
+  text-align: center;
+  margin: 1.8rem 0;
+}
+h3 {
+  font-size: 3.2rem;
+  margin-top: 1rem;
+}
+h4 {
+  font-size: 2.4rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  /* column-gap: 5.2rem; */
+  margin-bottom: 4rem;
+  align-items: center;
+}
+.calculation {
+  padding: 2.4rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  /* background-image: linear-gradient(
+    to right top,
+    #6ea0bc,
+    #5fa1bb,
+    #4fa3b8,
+    #3fa4b3,
+    #31a5ac
+  ); */
+}
+input {
+  background-color: #dcdcdc;
+  border: none;
+  padding: 1.6rem 1.6rem;
+  font-size: 2rem;
+  margin: 1rem 1.6rem;
+  border-radius: 0.8rem;
+}
+input:focus {
+  outline: none;
+}
+
+label {
+  display: inline-block;
+  width: 12rem;
+  text-align: right;
+}
+button {
+  margin: 1rem 0rem;
+  font: inherit;
+  color: white;
+  font-weight: bold;
+  background-color: #31a5ac;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  /* transition: all 0.1s ease-in; */
+}
+button:hover {
+  background-color: #27848a;
+}
+#saveBtn {
+  display: inline-block;
+  margin-left: 1.6rem;
+}
+.notify-section {
+  border-radius: 1.2rem;
+  color: white;
+  font-weight: 700;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  padding: 1.8rem;
+  display: none;
+  left: 50%;
+  bottom: 1%;
+  position: fixed;
+  background-color: red;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  body {
+    /* background-color: red; */
+  }
+  label {
+    display: block;
+    text-align: left;
+  }
+  input {
+    width: 100%;
+    margin-left: 0;
+  }
+  #save {
+    width: 75%;
+  }
+}

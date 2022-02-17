@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="notify-section">
+           
+      </div>
+    <main class="container">
+      <h1>Expense Manager 💰</h1>
+      <section>
+        <div class="grid">
+          <div>
+            <img src="img/22.png" alt="" />
+          </div>
+          <div class="calculation">
+            <h3>Income</h3>
+            <p>
+              <label for="income">Income:</label>
+              <input
+                type="text"
+                name="income"
+                id="income"
+                placeholder="Enter ammount"
+              />
+            </p>
+            <h3>Expenses</h3>
+            <p>
+              <label for="food">Food: </label>
+              <input
+                type="text"
+                name="food"
+                id="food"
+                placeholder="Enter ammount"
+              />
+            </p>
+            <p>
+              <label for="name">Rent: </label>
+              <input
+                type="text"
+                name="rent"
+                id="rent"
+                placeholder="Enter ammount"
+              />
+            </p>
+            <p>
+              <label for="cloth">Clothes: </label>
+              <input
+                type="text"
+                name="cloth"
+                id="cloth"
+                placeholder="Enter ammount"
+              />
+            </p>
+            <button id="calcBtn">Calculate</button>
+            <h4>Total Expenses: <span id="totalExp">0</span></h4>
+            <h4>Balance: <span id="totalBal">0</span></h4>
+            <p>
+              <label for="save">Save: </label>
+              <input
+                type="text"
+                name="save"
+                id="save"
+                placeholder="Enter ammount"
+              />
+              %
+              <button id="saveBtn">Save</button>
+              <h4>Saving Amount: <span id="totalSave">0</span></h4>
+              <h4>Remaining Balance: <span id="totalRem">0</span></h4>
+            </p>
+          </div>
+        </div>
+      </section>
+      <div>
+        
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
