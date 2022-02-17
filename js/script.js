@@ -4,11 +4,11 @@ function isInputValid() {
   for (const arg of arguments) {
     if (isNaN(arg.value)) {
       valid = false;
-      const message = "Invalid input for " + arg.id;
+      const message = "Enter valid number for " + arg.id;
       showError(message);
     } else if (Number(arg.value) < 0) {
       valid = false;
-      const message = "Enter positive number for " + arg.id;
+      const message = "Enter positive integer for " + arg.id;
       showError(message);
     }
   }
@@ -49,7 +49,7 @@ document.getElementById("calcBtn").addEventListener("click", function () {
       putValue("totalExp", totalExp);
       putValue("totalBal", totalBal);
     } else {
-      showError("Your expense is greater than your income.");
+      showError("You can't spend more than your income");
     }
   }
 });
@@ -66,7 +66,7 @@ document.getElementById("saveBtn").addEventListener("click", function () {
       putValue("totalSave", totalSave);
       putValue("totalRem", totalRem);
     } else {
-      showError("Your savings is greater than your balance.");
+      showError("You don't have enough money to save");
     }
   }
 });
