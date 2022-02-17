@@ -1,4 +1,7 @@
+/* import font */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap");
+
+/* global reset */
 
 * {
   margin: 0;
@@ -12,15 +15,10 @@ body {
   font-size: 2rem;
   font-family: "Titillium Web", sans-serif;
 }
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
 img {
   display: block;
   width: 100%;
 }
-
 h1 {
   font-size: 4.6rem;
   text-align: center;
@@ -33,10 +31,16 @@ h3 {
 h4 {
   font-size: 2.4rem;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* customize css */
+
 .grid {
   display: grid;
   grid-template-columns: 5fr 5fr;
-  /* column-gap: 5.2rem; */
   margin-bottom: 4rem;
   align-items: center;
 }
@@ -44,14 +48,6 @@ h4 {
   padding: 2.4rem;
   background-color: #f8f8f8;
   text-align: center;
-  /* background-image: linear-gradient(
-    to right top,
-    #6ea0bc,
-    #5fa1bb,
-    #4fa3b8,
-    #3fa4b3,
-    #31a5ac
-  ); */
 }
 input {
   background-color: #dcdcdc;
@@ -78,7 +74,6 @@ button {
   background-color: #31a5ac;
   border: none;
   padding: 0.8rem 1.6rem;
-  /* transition: all 0.1s ease-in; */
 }
 button:hover {
   background-color: #27848a;
@@ -100,6 +95,9 @@ button:hover {
   position: fixed;
   background-color: red;
 }
+
+/* for mobile responsive */
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
